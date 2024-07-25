@@ -1,6 +1,28 @@
-import React from 'react'
+import { useState } from 'react';
+import Select from 'react-select';
+
 
 const UpdateUserModel = () => {
+  const [userList, setUserList] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const options = [
+    { value: "1", label: "User" },
+    { value: "2", label: "Manager" },
+  ];
+
+  const handleChange = (selectedUserType) => {
+    setUserList(selectedUserType);
+  };
+
+  const customStyles = {
+    control: (styles) => ({
+      ...styles,
+      backgroundColor: "white",
+      border: "1px solid #dee2e6",
+      borderRadius: "0px",
+    }),
+  };
   return (
     <div class="modal fade" id="exampleModal">
       <div class="modal-dialog modal-lg">
@@ -34,7 +56,15 @@ const UpdateUserModel = () => {
                 </div>
                 <div className="col-md-6 mb-3">
                   <label className='form-label'>User Type</label>
-                  <input type="text" className='form-control rounded-0' />
+                  <Select
+                      options={options}
+                      value={userList}
+                      onChange={handleChange}
+                      isLoading={loading}
+                      placeholder={ loading ? "Loading..." : "Select User Type..."}
+                      isClearable={true}
+                      styles={customStyles}
+                    />
                 </div>
                 <div className="col-md-6 mb-3">
                   <label className='form-label'>Password</label>
