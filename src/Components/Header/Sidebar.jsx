@@ -20,7 +20,7 @@ const Sidebar = () => {
           <NavLink to={"/"} className="d-flex align-items-center justify-content-center">
           <img src={logo} className='img-fluid' alt="logo" />
           </NavLink>
-          <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          {/* <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
         </div>
         <div className="offcanvas-body">
           <ul className="dropdown_item pb-5">
