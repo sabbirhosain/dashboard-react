@@ -45,7 +45,7 @@ const UserTable = () => {
       cell: row => <div className="d-flex align-items-center gap-2">
         <button data-bs-toggle="modal" data-bs-target="#exampleModal" className="btn btn-outline-success rounded-0 btn-sm"><BiEditAlt /></button>
         <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-        <button className="btn btn-outline-primary rounded-0 btn-sm"><BsEyeFill /></button>
+        {/* <button className="btn btn-outline-primary rounded-0 btn-sm"><BsEyeFill /></button> */}
       </div>
 
     }

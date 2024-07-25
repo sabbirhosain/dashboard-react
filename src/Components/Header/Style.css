@@ -8,10 +8,10 @@
     height: 100vh !important;
 }
 
-.offcanvas_logo {
-    width: 100%;
+.offcanvas-header{
+    height: 80px;
+    max-height: 80px;
 }
-
 .offcanvas-body {
     padding: 0px;
 

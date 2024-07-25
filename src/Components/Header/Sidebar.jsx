@@ -1,17 +1,25 @@
-import React from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
+import { MdAccountBalance, MdDashboardCustomize, MdInventory } from "react-icons/md";
+import { HiMiniUsers } from "react-icons/hi2";
+import { TbReportSearch } from "react-icons/tb";
+import { GrTransaction } from "react-icons/gr";
+import { IoSettings } from "react-icons/io5";
+import { GrDashboard } from 'react-icons/gr'
+import logo from "../../assets/dashboard.png"
 import { NavLink, useLocation } from 'react-router-dom'
 import "./Style.css"
-import { GrDashboard } from 'react-icons/gr'
+
+
 const Sidebar = () => {
   const URL = useLocation()
-
 
   return (
     <div className="sidebar">
       <div className="offcanvas offcanvas-start offcanvas_sidebar" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div className="offcanvas-header">
-          <NavLink to={"/"} className="text-center text-black">Company Name - <small className="bg-danger text-white py-1 px-2">Admin</small></NavLink>
+          <NavLink to={"/"} className="d-flex align-items-center justify-content-center">
+          <img src={logo} className='img-fluid' alt="logo" />
+          </NavLink>
           <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
@@ -19,13 +27,13 @@ const Sidebar = () => {
 
             <li className="dropdown_list">
               <NavLink to={"/"} className="dropdown_btn">
-                <span className="dropdown_list_name"><GrDashboard className="dropdown_list_icon" />Dashboard</span>
+                <span className="dropdown_list_name"><MdDashboardCustomize className="dropdown_list_icon" />Dashboard</span>
               </NavLink>
             </li>
 
             <li className="dropdown_list">
               <NavLink to={"/users"} className="dropdown_btn">
-                <span className="dropdown_list_name"><GrDashboard className="dropdown_list_icon" />Users</span>
+                <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Users</span>
               </NavLink>
             </li>
 
@@ -34,7 +42,7 @@ const Sidebar = () => {
               <li className="dropdown_list">
                 <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePaymenta" aria-expanded="false" aria-controls="flush-collapsePaymenta">
                   <span className="dropdown_list_name">
-                    <GrDashboard className="dropdown_list_icon" />Accounts</span>
+                    <MdAccountBalance className="dropdown_list_icon" />Accounts</span>
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
@@ -63,7 +71,7 @@ const Sidebar = () => {
               <li className="dropdown_list">
                 <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInventory" aria-expanded="false" aria-controls="flush-collapseInventory">
                   <span className="dropdown_list_name">
-                    <GrDashboard className="dropdown_list_icon" />Inventory</span>
+                    <MdInventory className="dropdown_list_icon" />Inventory</span>
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
@@ -94,7 +102,7 @@ const Sidebar = () => {
               <li className="dropdown_list">
                 <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePayment2" aria-expanded="false" aria-controls="flush-collapsePayment2">
                   <span className="dropdown_list_name">
-                    <GrDashboard className="dropdown_list_icon" />Transaction</span>
+                    <GrTransaction className="dropdown_list_icon" />Transaction</span>
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
@@ -108,7 +116,7 @@ const Sidebar = () => {
               <li className="dropdown_list">
                 <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseReports" aria-expanded="false" aria-controls="flush-collapseReports">
                   <span className="dropdown_list_name">
-                    <GrDashboard className="dropdown_list_icon" />Reports</span>
+                    <TbReportSearch className="dropdown_list_icon" />Reports</span>
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
@@ -148,7 +156,7 @@ const Sidebar = () => {
               <li className="dropdown_list">
                 <NavLink to={"/setting"} className="dropdown_btn">
                   <span className="dropdown_list_name">
-                    <GrDashboard className="dropdown_list_icon" />Settings</span>
+                    <IoSettings className="dropdown_list_icon" />Settings</span>
                 </NavLink>
               </li>
 
