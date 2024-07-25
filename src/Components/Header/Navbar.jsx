@@ -22,8 +22,8 @@ const Navbar = () => {
           </button>
           {/*====>> Offcanvas bar end <<====*/}
 
-          <div className="d-flex align-items-center gap-2">
-            <h5 className="company_brand d-none d-md-block">Company Name</h5>
+          <div className="d-none d-md-flex align-items-center gap-2">
+            <h5 className="company_brand">Company Name</h5>
             <small className="bg-danger text-white py-1 px-2">Admin</small>
           </div>
           <div className="d-flex align-items-center gap-3">
