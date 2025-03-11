@@ -8,11 +8,27 @@
     height: 100vh !important;
 }
 
-.offcanvas-header{
-    max-height: 80px;
+.dashboard_logo_img {
+    max-width: 30px;
+    max-height: auto;
+    object-fit: cover;
+}
+
+.dashboard_logo_text {
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--Primary-Fonts);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.offcanvas-header {
+    max-height: 70px;
     border-bottom: 1px solid rgb(202, 199, 199);
     padding: 20px 10px;
 }
+
 .offcanvas-body {
     padding: 0px;
 
@@ -48,16 +64,15 @@
 
 .dropdown_btn {
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 30px;
-    letter-spacing: -0.30000001192092896px;
+    padding: 10px;
     text-align: left;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    text-transform: capitalize;
 }
 
 .dropdown_btn.active {
@@ -98,13 +113,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    gap: 10px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 30px;
-    letter-spacing: -0.30000001192092896px;
     text-align: left;
     width: 100%;
-    padding: 5px 0px 5px 40px;
+    padding: 5px 0px 5px 10px;
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -116,7 +130,7 @@
 
 .dropdown_link.active {
     color: black;
-    background-color: #FEE715;
+    background-color: white;
     border-left: 5px solid black;
 }
 
@@ -146,18 +160,16 @@
     }
 }
 
-
-
 /* ============ Navbar ============= */
 .navbar_top {
     width: 100%;
-    height: 80px;
+    height: 70px;
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
     background-color: white;
 }
 
 .navbar_row {
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -165,24 +177,8 @@
 
 .company_brand {
     margin-left: 250px;
-}
-
-.new_company_btn {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: center;
-    display: inline-block;
-    padding: 16px 24px;
-    background-color: transparent;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    background-color: black;
-
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
 }
 
 .company_btn_icon {
@@ -190,50 +186,6 @@
     margin-right: 5px;
 }
 
-.create_invoice_btn {
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: center;
-    display: inline-block;
-    padding: 16px 24px;
-    background-color: transparent;
-    border-radius: 6px;
-    border: 1px solid black;
-    margin-right: 20px;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        color: white;
-        background-color: black;
-    }
-}
-
-.user_dropdown {
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 0px;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        background-color: #f8fdfa;
-    }
-}
-
-.user_dropdown_icon {
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-.user_dropdown_arrow_icon {
-    font-size: 12px;
-}
 
 @media (min-width: 768px) {
     .navbar_top {
@@ -264,18 +216,6 @@
     .company_btn_icon {
         color: black;
         font-size: 22px;
-    }
-
-    .user_dropdown {
-        background-color: transparent;
-        box-shadow: none;
-        padding: 0;
-        padding-left: 10px;
-    }
-
-    .user_dropdown_icon {
-        font-size: 30px;
-        margin-right: 0px;
     }
 
     .company_brand {

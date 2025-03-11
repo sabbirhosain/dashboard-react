@@ -1,5 +1,5 @@
 import { IoIosArrowDown } from 'react-icons/io'
-import { MdAccountBalance, MdDashboardCustomize, MdInventory } from "react-icons/md";
+import { MdAccountBalance, MdDashboardCustomize, MdDoubleArrow, MdInventory } from "react-icons/md";
 import { HiMiniUsers } from "react-icons/hi2";
 import { TbReportSearch } from "react-icons/tb";
 import { GrTransaction } from "react-icons/gr";
@@ -17,10 +17,11 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="offcanvas offcanvas-start offcanvas_sidebar" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div className="offcanvas-header">
-          <NavLink to={"/"} className="d-flex align-items-center justify-content-center">
-          <img src={logo} className='img-fluid' alt="logo" />
+          <NavLink to={"/"} className="d-flex align-items-center gap-2">
+            <img src={logo} className='dashboard_logo_img' alt="logo" />
+            <span className='dashboard_logo_text'>Inventory</span>
           </NavLink>
-          {/* <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
+          <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
           <ul className="dropdown_item pb-5">
@@ -46,9 +47,9 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapsePaymenta" className={URL.pathname === "/accounts" || URL.pathname === "/payment-methods" || URL.pathname === "/account-statement" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
-                  <NavLink to={"/accounts"} className="dropdown_link">Chart of Accounts</NavLink>
-                  <NavLink to={"/account-statement"} className="dropdown_link">Account Statement</NavLink>
+                <div id="flush-collapsePaymenta" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Chart of Accounts</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Account Statement</NavLink>
                 </div>
               </li>
 
@@ -59,12 +60,12 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapseUser" className={URL.pathname === "/all-user-list" || URL.pathname === "/sales-person" || URL.pathname === "/suppliers-list" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingUser" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseUser" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingUser" data-bs-parent="#accordionFlushExample">
 
-                  <NavLink to={"/all-user-list"} className="dropdown_link">All User</NavLink>
-                  <NavLink to={"/sales-person"} className="dropdown_link">Sales Person List</NavLink>
-                  <NavLink to={"/suppliers-list"} className="dropdown_link">Suppliers</NavLink>
-                  <NavLink to={"/area-manager"} className="dropdown_link">Area Manager</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />All User</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Sales Person List</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Suppliers</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Area Manager</NavLink>
                 </div>
               </li>
 
@@ -75,11 +76,11 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapseInventory" className={URL.pathname === "/inventory-raw-item" || URL.pathname === "/inventory-product" || URL.pathname === "/inventory-pack-size" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingInventory" data-bs-parent="#accordionFlushExample">
-                  <NavLink to={"/inventory-raw-item"} className="dropdown_link">Raw item</NavLink>
-                  <NavLink to={"/inventory-product"} className="dropdown_link">Product</NavLink>
-                  <NavLink to={"/inventory-pack-size"} className="dropdown_link">Pack size</NavLink>
-                  <NavLink to={"/stock-management"} className="dropdown_link">Stock Adjustment</NavLink>
+                <div id="flush-collapseInventory" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingInventory" data-bs-parent="#accordionFlushExample">
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Raw item</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Product</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Pack size</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Stock Adjustment</NavLink>
                 </div>
               </li>
 
@@ -90,12 +91,12 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapseInvoice" className={URL.pathname === "/invoice-history" || URL.pathname === "/return-history" || URL.pathname === "/refund-history" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingInvoice" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseInvoice" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingInvoice" data-bs-parent="#accordionFlushExample">
 
-                  <NavLink to={"/invoice-history"} className="dropdown_link">Invoice</NavLink>
-                  <NavLink to={"/return-history"} className="dropdown_link">Return</NavLink>
-                  <NavLink to={"/refund-history"} className="dropdown_link">Refund</NavLink>
-                  <NavLink to={"/sample-history"} className="dropdown_link">Sample</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Invoice</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Return</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Refund</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Sample</NavLink>
                 </div>
               </li>
 
@@ -106,10 +107,10 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapsePayment2" className={URL.pathname === "/transaction-pay-to-supplier" || URL.pathname === "/transaction-receive" || URL.pathname === "/transaction-transfer" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPayment2" data-bs-parent="#accordionFlushExample">
-                  <NavLink to={"/transaction-pay-to-supplier"} className="dropdown_link">Pay to supplier</NavLink>
-                  <NavLink to={"/transaction-receive"} className="dropdown_link">Receive</NavLink>
-                  <NavLink to={"/transaction-transfer"} className="dropdown_link">Transfer</NavLink>
+                <div id="flush-collapsePayment2" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPayment2" data-bs-parent="#accordionFlushExample">
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Pay to supplier</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Receive</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Transfer</NavLink>
                 </div>
               </li>
 
@@ -120,41 +121,41 @@ const Sidebar = () => {
                   <IoIosArrowDown className="dropdown_icon" />
                 </button>
 
-                <div id="flush-collapseReports" className={URL.pathname === "/transaction-reports" || URL.pathname === "/purchase-reports" || URL.pathname === "/expense-reports" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingReports" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseReports" className={URL.pathname === "#" || URL.pathname === "#" || URL.pathname === "#" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingReports" data-bs-parent="#accordionFlushExample">
 
-                  <NavLink to={"/sales-reports"} className="dropdown_link">Sales Reports</NavLink>
-                  <NavLink to={"/transfer-reports"} className="dropdown_link">Transfer Reports</NavLink>
-                  <NavLink to={"/expense-reports"} className="dropdown_link">Expense Reports</NavLink>
-                  <NavLink to={"/return-reports"} className="dropdown_link">Return Reports</NavLink>
-                  <NavLink to={"/refund-reports"} className="dropdown_link">Refund Reports</NavLink>
-                  <NavLink to={"/receive-reports"} className="dropdown_link">Receive Reports</NavLink>
-                  <NavLink to={"/purchase-reports"} className="dropdown_link">Purchase Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Sales Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Transfer Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Expense Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Return Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Refund Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Receive Reports</NavLink>
+                  <NavLink to={"#"} className="dropdown_link"><MdDoubleArrow />Purchase Reports</NavLink>
                 </div>
               </li>
 
               <li className="dropdown_list">
-                <NavLink to={"/payment-expenses"} className="dropdown_btn">
+                <NavLink to={"#"} className="dropdown_btn">
                   <span className="dropdown_list_name">
                     <GrDashboard className="dropdown_list_icon" />Expense</span>
                 </NavLink>
               </li>
 
               <li className="dropdown_list">
-                <NavLink to={"/purchases"} className="dropdown_btn">
+                <NavLink to={"#"} className="dropdown_btn">
                   <span className="dropdown_list_name">
                     <GrDashboard className="dropdown_list_icon" />Purchase</span>
                 </NavLink>
               </li>
 
               <li className="dropdown_list">
-                <NavLink to={"/work-order"} className="dropdown_btn">
+                <NavLink to={"#"} className="dropdown_btn">
                   <span className="dropdown_list_name">
                     <GrDashboard className="dropdown_list_icon" />Work Order</span>
                 </NavLink>
               </li>
 
               <li className="dropdown_list">
-                <NavLink to={"/setting"} className="dropdown_btn">
+                <NavLink to={"#"} className="dropdown_btn">
                   <span className="dropdown_list_name">
                     <IoSettings className="dropdown_list_icon" />Settings</span>
                 </NavLink>

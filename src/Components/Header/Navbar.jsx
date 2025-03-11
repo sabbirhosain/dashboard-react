@@ -1,14 +1,15 @@
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaFileInvoice } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Style.css";
 import { BiLogOut } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { SlSettings } from "react-icons/sl";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <div className="navbar_top">
-      <div className="container-fluid">
+      <div className="container-fluid pe-md-5">
         <div className="navbar_row">
           {/*====>> Offcanvas bar start <<====*/}
           <button
@@ -23,26 +24,21 @@ const Navbar = () => {
           {/*====>> Offcanvas bar end <<====*/}
 
           <div className="d-none d-md-flex align-items-center gap-2">
-            <h5 className="company_brand">Company Name</h5>
-            <small className="bg-danger text-white py-1 px-2">Admin</small>
+            <h5 className="company_brand">inventory management system</h5>
+            <small className="bg-success text-white px-2">Admin</small>
           </div>
           <div className="d-flex align-items-center gap-3">
-            <Link
-              to={"/create-new-invoice"}
-              className="btn btn-outline-dark rounded-0"
-            >
-              Create Invoice
-            </Link>
+            <Link to={"#"} className="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center"> <FaFileInvoice /> </Link>
 
             <div className="btn-group">
               <button
                 type="button"
-                className="btn btn-outline-dark rounded-0 text-uppercase dropdown-toggle"
+                className="btn btn-outline-dark rounded-0 dropdown-toggle d-flex align-items-center justify-content-center"
                 data-bs-toggle="dropdown"
                 data-bs-display="static"
                 aria-expanded="false"
               >
-                sabbir
+                <FaUserCircle />
               </button>
               <ul className="dropdown-menu dropdown-menu-end mt-2 py-0 rounded-0">
                 <li>
