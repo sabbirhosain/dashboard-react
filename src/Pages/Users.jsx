@@ -4,6 +4,7 @@ import Select from 'react-select';
 import UserTable from '../Components/Users/UserTable';
 import AddUserModel from '../Components/Users/AddUserModel';
 import UpdateUserModel from '../Components/Users/UpdateUserModel';
+import { MdFormatListBulletedAdd } from "react-icons/md";
 
 const Users = () => {
   const [userList, setUserList] = useState()
@@ -31,9 +32,9 @@ const Users = () => {
     <Layout>
       <section className=''>
 
-        <div className='d-flex align-items-center justify-content-between bg-white p-3 my-2'>
-          <h4>User List</h4>
-          <button className='btn btn-outline-dark rounded-0' data-bs-toggle="modal" data-bs-target="#exampleModal">Add New</button>
+        <div className='d-flex align-items-center justify-content-between bg-white p-3 ps-3 pe-md-5 my-2'>
+          <h4 className='table_name_title'>User List</h4>
+          <button className='btn btn-outline-primary btn-sm rounded-0' data-bs-toggle="modal" data-bs-target="#exampleModal"><MdFormatListBulletedAdd /></button>
         </div>
 
         <div className="row bg-white p-3">

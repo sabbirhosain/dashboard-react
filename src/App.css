@@ -21,6 +21,16 @@
 
 
 /* ====== Table Heading Style ======= */
+.table_name_title {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.modal_box {
+    border-top: 3px solid red;
+}
+
 .mHisf,
 .fwQJth {
     color: #223039 !important;

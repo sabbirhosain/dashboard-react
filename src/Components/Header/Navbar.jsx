@@ -6,6 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { SlSettings } from "react-icons/sl";
 import { FaUserCircle } from "react-icons/fa";
 
+
 const Navbar = () => {
   return (
     <div className="navbar_top">
@@ -28,7 +29,7 @@ const Navbar = () => {
             <small className="bg-success text-white px-2">Admin</small>
           </div>
           <div className="d-flex align-items-center gap-3">
-            <Link to={"#"} className="btn btn-outline-dark rounded-0 d-flex align-items-center justify-content-center"> <FaFileInvoice /> </Link>
+            <Link to={"#"} title="Create Invoice" className="btn btn-outline-primary rounded-0 d-flex align-items-center justify-content-center"> <FaFileInvoice /> </Link>
 
             <div className="btn-group">
               <button

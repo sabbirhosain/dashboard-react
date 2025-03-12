@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import Select from 'react-select';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const AddUserModel = () => {
   const [userList, setUserList] = useState();
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const passwordShowToggle = () => { setShowPassword(!showPassword) };
 
   const options = [
     { value: "1", label: "User" },
@@ -26,7 +29,7 @@ const AddUserModel = () => {
   return (
     <div class="modal fade" id="exampleModal">
       <div class="modal-dialog modal-lg">
-        <div class="modal-content rounded-0">
+        <div class="modal-content modal_box rounded-0">
           <form action="">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -64,22 +67,25 @@ const AddUserModel = () => {
                 <div className="col-md-6 mb-3">
                   <label className="form-label">User Type</label>
                   <Select
-                      options={options}
-                      value={userList}
-                      onChange={handleChange}
-                      isLoading={loading}
-                      placeholder={ loading ? "Loading..." : "Select User Type..."}
-                      isClearable={true}
-                      styles={customStyles}
-                    />
+                    options={options}
+                    value={userList}
+                    onChange={handleChange}
+                    isLoading={loading}
+                    placeholder={loading ? "Loading..." : "Select User Type..."}
+                    isClearable={true}
+                    styles={customStyles}
+                  />
                 </div>
                 <div className="col-md-6 mb-3">
                   <label className="form-label">Password</label>
-                  <input type="text" className="form-control rounded-0" />
+                  <input type={showPassword ? "text" : "password"} className="form-control rounded-0" />
                 </div>
                 <div className="col-md-6 mb-3">
                   <label className="form-label">Confirm Password</label>
-                  <input type="text" className="form-control rounded-0" />
+                  <div className='position-relative'>
+                    <input type={showPassword ? "text" : "password"} className='form-control rounded-0' />
+                    <button type="button" className='password_show_btn' onClick={passwordShowToggle}>{showPassword ? <FaRegEye /> : <FaRegEyeSlash />}</button>
+                  </div>
                 </div>
               </div>
             </div>
