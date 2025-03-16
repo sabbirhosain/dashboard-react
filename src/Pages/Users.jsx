@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import Layout from '../Layout/Layout'
 import Select from 'react-select';
 import UserTable from '../Components/Users/UserTable';
-import AddUserModel from '../Components/Users/AddUserModel';
-import UpdateUserModel from '../Components/Users/UpdateUserModel';
 import { MdFormatListBulletedAdd } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Users = () => {
   const [userList, setUserList] = useState()
@@ -34,7 +33,7 @@ const Users = () => {
 
         <div className='d-flex align-items-center justify-content-between bg-white p-3 ps-3 pe-md-5 my-2'>
           <h4 className='table_name_title'>User List</h4>
-          <button className='btn btn-outline-primary btn-sm rounded-0' data-bs-toggle="modal" data-bs-target="#exampleModal"><MdFormatListBulletedAdd /></button>
+          <Link to='/users/create' className='btn btn-outline-primary btn-sm rounded-0'><MdFormatListBulletedAdd /></Link>
         </div>
 
         <div className="row bg-white p-3">
@@ -69,8 +68,6 @@ const Users = () => {
         </div>
 
         <div className='mt-2'>
-          <AddUserModel />
-          <UpdateUserModel />
           <UserTable />
         </div>
       </section>

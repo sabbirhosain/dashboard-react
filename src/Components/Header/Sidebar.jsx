@@ -33,7 +33,7 @@ const Sidebar = () => {
             </li>
 
             <li className="dropdown_list">
-              <NavLink to={"/users"} className="dropdown_btn">
+              <NavLink to={"/users/table"} className="dropdown_btn">
                 <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Users</span>
               </NavLink>
             </li>

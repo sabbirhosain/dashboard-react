@@ -3,6 +3,7 @@ import DataTable from "react-data-table-component"
 import { BiEditAlt, BiTrash } from "react-icons/bi";
 import { BsEyeFill } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const UserTable = () => {
   const [error, setError] = useState(null)
@@ -56,8 +57,8 @@ const UserTable = () => {
     {
       name: "Action",
       cell: row => <div className="d-flex align-items-center gap-2">
-        <button className="btn btn-outline-primary rounded-0 btn-sm"><BsEyeFill /></button>
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal" className="btn btn-outline-success rounded-0 btn-sm"><BiEditAlt /></button>
+        <Link to='/users/view' className="btn btn-outline-primary rounded-0 btn-sm"><BsEyeFill /></Link>
+        <Link to='/users/update' className="btn btn-outline-success rounded-0 btn-sm"><BiEditAlt /></Link>
         <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
         <button className="btn btn-outline-dark rounded-0 btn-sm"><FaCheck /></button>
       </div>,
